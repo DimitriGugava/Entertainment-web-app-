@@ -1,15 +1,18 @@
 .mainContainer {
+  position: relative;
   height: 2467px;
   width: 375px;
   margin: 0px auto;
   background: #10141e;
+  z-index: -100;
 }
 
 .selectMovieTypeBox {
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 80px;
+  justify-content: space-around;
+  gap: 50px;
   height: 56px;
   width: 375px;
   background: #161d2f;
@@ -30,4 +33,174 @@
 .selectType {
   height: 16px;
   width: 16px;
+}
+.profilePhotoBox {
+  height: 32px;
+  width: 32px;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 20px;
+  background-image: url(../assets/dima.png);
+  background-size: 100% 100%;
+}
+
+.searchInputBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 32px;
+  width: 340px;
+  gap: 24px;
+  margin: 33px 20px;
+}
+.searchIcon {
+  height: 24px;
+  width: 24px;
+}
+.searchInput {
+  height: 30px;
+  width: 280px;
+  font-family: "Outfit";
+  background: none;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #ffffff;
+  outline: none;
+}
+.trendingContainer {
+  display: flex;
+  flex-direction: row;
+
+  gap: 0px;
+  height: 295px;
+  width: auto;
+  margin: 33px 25px;
+}
+.trendingHeadingText {
+  height: 40px;
+  width: 122px;
+  font-family: "Outfit";
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 40px;
+  letter-spacing: -0.5px;
+  text-align: left;
+  color: #ffffff;
+}
+.trendingBookMarkBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  height: 32px;
+  width: 32px;
+  margin: 40px 270px;
+  background: #10141e;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  border-radius: 50px;
+}
+.tredingMovieImage {
+  position: absolute;
+  height: auto;
+  width: 320px;
+  border-radius: 8px;
+  margin-top: 25px;
+  z-index: -9;
+}
+.descriptionForTrendingBox {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 150px 20px;
+  height: 52px;
+  width: 150px;
+}
+.trendingUpperDescription {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  height: 15px;
+  width: 96px;
+}
+.trendingYear {
+  height: 15px;
+  width: 26px;
+  font-family: "Outfit";
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 15px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #ffffff;
+}
+.trendingDot {
+  height: 3px;
+  width: 3px;
+  background: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  border-radius: 100px;
+}
+.trendingMovieTypeSmallBox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 3px;
+  width: 3px;
+  gap: 3px;
+}
+.trendingIconForType {
+  height: 12px;
+  width: 12px;
+}
+
+.trendingMovieTypeText {
+  height: 15px;
+  width: 32px;
+  font-family: "Outfit";
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 15px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #ffffff;
+}
+.movieTvShowTitle {
+  height: 19px;
+  width: 91px;
+  font-family: "Outfit";
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.tredingMovieClass {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: -30px 238px;
+  height: 21px;
+  width: 34px;
+  background: #5c5c5c;
+  mix-blend-mode: normal;
+  opacity: 0.55;
+  border-radius: 10.5px;
+}
+.tredingMovieClassText {
+  height: 16px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
 }

@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap");
+
 * {
-  border: 0.1px solid red;
+  /* border: 0.1px solid red; */
   padding-top: 0.1px;
   padding-bottom: 0.1px;
 }
