@@ -1,0 +1,33 @@
+.mainContainer {
+  height: 2467px;
+  width: 375px;
+  margin: 0px auto;
+  background: #10141e;
+}
+
+.selectMovieTypeBox {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 80px;
+  height: 56px;
+  width: 375px;
+  background: #161d2f;
+}
+
+.movieIcon {
+  margin: 16px 18px;
+}
+.movieTypeBox {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 16px;
+  width: 133px;
+  gap: 24px;
+}
+
+.selectType {
+  height: 16px;
+  width: 16px;
+}
