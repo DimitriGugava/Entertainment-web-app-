@@ -1,5 +1,4 @@
 import "./Main.css";
-
 import MovieIcon from "../assets/movie.svg";
 import AllMoviesSeries from "../assets/allMovieTvSeries.svg";
 import OnlyMovies from "../assets/icon-nav-movies.svg";
@@ -12,9 +11,20 @@ import bookMarkIconFull from "../assets/icon-bookmark-full.svg";
 import movieType from "../assets/movieType.svg";
 import data from "../data.json";
 import { useState } from "react";
+import Recommended from "../Recommended/Recommended";
+
 const Main = () => {
   const [movies, setMovies] = useState(data);
-  const trendingMovies = movies.filter((movie) => movie.isTrending);
+  const [trendingLeft, setTrendingLeft] = useState(20);
+  const [bookMarked, setBookMarked] = useState(true);
+
+  const handleMoveTrendingLeft = () => {
+    setTrendingLeft(trendingLeft - 80);
+  };
+
+  const makeBookMarked = () => {
+    setBookMarked(!bookMarked);
+  };
 
   return (
     <div className="mainContainer">
@@ -31,40 +41,59 @@ const Main = () => {
       <div className="searchInputBox">
         <img className="searchIcon" src={searchIcon} />
         <input
-          type="text"
+          type={"text"}
           className="searchInput"
           placeholder="Search for movies or TV series"
         />
       </div>
+      <a className="trendingHeadingText">Trending</a>
 
-      <div className="trendingContainer">
-        <a className="trendingHeadingText">Trending</a>
-        {trendingMovies.map((movie) => (
-          <div className="trendingBox">
-            <div className="trendingBookMarkBox">
-              <img className="trendingBookMarkIcon" src={bookMarkIcon} />
-            </div>
-            <img
-              className="tredingMovieImage"
-              src={movie.thumbnail.trending?.small}
-            />
-            <div className="descriptionForTrendingBox">
-              <div className="trendingUpperDescription">
-                <a className="trendingYear">{movie.year}</a>
-                <div className="trendingDot"></div>
-                <div className="trendingMovieTypeSmallBox">
-                  <img src={movieType} className="trendingIconForType" />
-                  <a className="trendingMovieTypeText">{movie.category}</a>
+      <div
+        className="trendingContainer"
+        style={{ marginLeft: `${trendingLeft}px` }}
+        onClick={handleMoveTrendingLeft}
+      >
+        {movies
+          .filter((movie) => movie.isTrending)
+          .map((movie) => (
+            <div className="trendingBox">
+              <div className="trendingBookMarkBox">
+                {bookMarked ? (
+                  <img
+                    className="trendingBookMarkIcon"
+                    src={bookMarkIcon}
+                    onClick={makeBookMarked}
+                  />
+                ) : (
+                  <img
+                    className="trendingBookMarkIcon"
+                    src={bookMarkIconFull}
+                    onClick={makeBookMarked}
+                  />
+                )}
+              </div>
+              <img
+                className="tredingMovieImage"
+                src={movie.thumbnail.trending?.small}
+              />
+              <div className="descriptionForTrendingBox">
+                <div className="trendingUpperDescription">
+                  <a className="trendingYear">{movie.year}</a>
+                  <div className="trendingDot"></div>
+                  <div className="trendingMovieTypeSmallBox">
+                    <img src={movieType} className="trendingIconForType" />
+                    <a className="trendingMovieTypeText">{movie.category}</a>
+                  </div>
+                </div>
+                <a className="movieTvShowTitle">{movie.title}</a>
+                <div className="tredingMovieClass">
+                  <a className="tredingMovieClassText">{movie.rating}</a>
                 </div>
               </div>
-              <a className="movieTvShowTitle">{movie.title}</a>
-              <div className="tredingMovieClass">
-                <a className="tredingMovieClassText">{movie.rating}</a>
-              </div>
             </div>
-          </div>
-        ))}
+          ))}
       </div>
+      <Recommended movies={movies} setMovies={setMovies} />
     </div>
   );
 };
