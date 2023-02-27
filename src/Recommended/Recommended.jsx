@@ -9,7 +9,7 @@ const Recommended = (props) => {
     <div className="recommendedContainer">
       <h1 className="recommendedText">Recomended</h1>
       <div className="recommendedMovieListContainer">
-        {props.movies
+        {props.filteredMovies
           .filter((movie) => movie)
           .map((movie) => (
             <>
@@ -36,9 +36,9 @@ const Recommended = (props) => {
                   </div>
                   <a className="recommendedMovieTitle">{movie.title}</a>
                 </div>
-              </div>
-              <div className="recommendedBookMarkBox">
-                <img className="recommendeBookmarkIcon" src={bookMarkIcon} />
+                <div className="recommendedBookMarkBox">
+                  <img className="recommendeBookmarkIcon" src={bookMarkIcon} />
+                </div>
               </div>
             </>
           ))}

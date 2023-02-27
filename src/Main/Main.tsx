@@ -17,6 +17,7 @@ const Main = () => {
   const [movies, setMovies] = useState(data);
   const [trendingLeft, setTrendingLeft] = useState(20);
   const [bookMarked, setBookMarked] = useState(true);
+  const [inputValue, setInputValue] = useState("");
 
   const handleMoveTrendingLeft = () => {
     setTrendingLeft(trendingLeft - 80);
@@ -25,6 +26,15 @@ const Main = () => {
   const makeBookMarked = () => {
     setBookMarked(!bookMarked);
   };
+
+  const readInputValue = (e: any) => {
+    setInputValue(e.target.value);
+    console.log(e.target.value);
+  };
+
+  const filteredMovies = movies.filter((movie) =>
+    movie.title.toLowerCase().includes(inputValue.toLowerCase())
+  );
 
   return (
     <div className="mainContainer">
@@ -44,6 +54,7 @@ const Main = () => {
           type={"text"}
           className="searchInput"
           placeholder="Search for movies or TV series"
+          onChange={readInputValue}
         />
       </div>
       <a className="trendingHeadingText">Trending</a>
@@ -93,7 +104,14 @@ const Main = () => {
             </div>
           ))}
       </div>
-      <Recommended movies={movies} setMovies={setMovies} />
+      <Recommended
+        movies={movies}
+        setMovies={setMovies}
+        readInputValue={readInputValue}
+        inputValue={inputValue}
+        setInputValue={setInputValue}
+        filteredMovies={filteredMovies}
+      />
     </div>
   );
 };
