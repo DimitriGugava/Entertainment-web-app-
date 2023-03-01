@@ -1,17 +1,16 @@
-import "./Recommended.css";
 import bookMarkIcon from "../assets/icon-bookmark-empty.svg";
 import bookMarkIconFull from "../assets/icon-bookmark-full.svg";
 import movieType from "../assets/movieType.svg";
 import data from "../data.json";
 
-const Recommended = (props) => {
+const Movies = (props: any) => {
   return (
     <div className="recommendedContainer">
       <h1 className="recommendedText">Recomended</h1>
       <div className="recommendedMovieListContainer">
         {props.filteredMovies
-          .filter((movie) => movie)
-          .map((movie) => {
+          .filter((movie: any) => movie)
+          .map((movie: any) => {
             const id = `recommended_${movie.id}`;
             return (
               <div className="recommendedMobieBox" key={movie.id}>
@@ -60,4 +59,4 @@ const Recommended = (props) => {
   );
 };
 
-export default Recommended;
+export default Movies;
