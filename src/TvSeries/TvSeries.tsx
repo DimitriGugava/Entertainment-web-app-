@@ -3,13 +3,13 @@ import bookMarkIconFull from "../assets/icon-bookmark-full.svg";
 import movieType from "../assets/movieType.svg";
 import data from "../data.json";
 
-const Movies = (props: any) => {
+const TvSeries = (props: any) => {
   return (
     <div className="recommendedContainer">
-      <h1 className="recommendedText">Movies</h1>
+      <h1 className="recommendedText">Recomended</h1>
       <div className="recommendedMovieListContainer">
         {props.filteredMovies
-          .filter((movie: any) => movie.category === "Movie")
+          .filter((movie: any) => movie.category === "TV Series")
           .map((movie: any) => {
             const id = `recommended_${movie.id}`;
             return (
@@ -59,4 +59,4 @@ const Movies = (props: any) => {
   );
 };
 
-export default Movies;
+export default TvSeries;

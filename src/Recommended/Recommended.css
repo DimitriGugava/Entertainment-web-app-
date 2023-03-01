@@ -11,14 +11,17 @@
   margin-left: 16px;
 }
 .recommendedContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   height: auto;
-  width: 343px;
+  width: 345px;
 }
 .recommendedMovieListContainer {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 2567px;
+  height: 2600px;
   width: 370px !important;
 
   background: #10141e;

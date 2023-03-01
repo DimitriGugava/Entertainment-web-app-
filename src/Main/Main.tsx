@@ -11,8 +11,9 @@ import bookMarkIconFull from "../assets/icon-bookmark-full.svg";
 import movieType from "../assets/movieType.svg";
 import activeAllMovies from "../assets/activeAllMovies.svg";
 import activeMovies from "../assets/activeMovies.svg";
-import activeTvSeries from "../assets/activeTvSeries.svg";
-import activeBookmarkedMoviesSeries from "../assets/activeBookMark.svg";
+import activeTvSeries from "../assets/activeTVSeries.svg";
+import activeBookmarkedMovies from "../assets/activeBookMark.svg";
+import TvSeries from "../TvSeries/TvSeries";
 
 import data from "../data.json";
 import { useState } from "react";
@@ -102,21 +103,45 @@ const Main = () => {
               onClick={showAllMoviesClick}
             />
           )}
-          <img
-            className="selectType"
-            src={OnlyMovies}
-            onClick={showOnlyMoviesClick}
-          />
-          <img
-            className="selectType"
-            src={OnlyTvSeries}
-            onClick={showOnlyTvSeriesClick}
-          />
-          <img
-            className="selectType"
-            src={BookmarkedMoviesSeries}
-            onClick={showBookmarkedMoviesSeriesClick}
-          />
+          {showOnlyMovies ? (
+            <img
+              className="selectType"
+              src={activeMovies}
+              onClick={showOnlyMoviesClick}
+            />
+          ) : (
+            <img
+              className="selectType"
+              src={OnlyMovies}
+              onClick={showOnlyMoviesClick}
+            />
+          )}
+          {showOnlyTvSeries ? (
+            <img
+              className="selectType"
+              src={activeTvSeries}
+              onClick={showOnlyTvSeriesClick}
+            />
+          ) : (
+            <img
+              className="selectType"
+              src={OnlyTvSeries}
+              onClick={showOnlyTvSeriesClick}
+            />
+          )}
+          {showBookmarkedMoviesSeries ? (
+            <img
+              className="selectType"
+              src={activeBookmarkedMovies}
+              onClick={showBookmarkedMoviesSeriesClick}
+            />
+          ) : (
+            <img
+              className="selectType"
+              src={BookmarkedMoviesSeries}
+              onClick={showBookmarkedMoviesSeriesClick}
+            />
+          )}
         </div>
         <div className="profilePhotoBox"></div>
       </div>
@@ -194,6 +219,20 @@ const Main = () => {
       )}
       {showOnlyMovies && (
         <Movies
+          movies={movies}
+          setMovies={setMovies}
+          readInputValue={readInputValue}
+          inputValue={inputValue}
+          setInputValue={setInputValue}
+          filteredMovies={filteredMovies}
+          bookMarked={bookMarked}
+          setBookMarked={setBookMarked}
+          makeBookMarked={makeBookMarked}
+        />
+      )}
+
+      {showOnlyTvSeries && (
+        <TvSeries
           movies={movies}
           setMovies={setMovies}
           readInputValue={readInputValue}
