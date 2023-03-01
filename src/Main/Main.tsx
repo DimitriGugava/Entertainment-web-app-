@@ -14,7 +14,7 @@ import activeMovies from "../assets/activeMovies.svg";
 import activeTvSeries from "../assets/activeTVSeries.svg";
 import activeBookmarkedMovies from "../assets/activeBookMark.svg";
 import TvSeries from "../TvSeries/TvSeries";
-
+import Bookmarked from "../Bookmarked/Bookmarked";
 import data from "../data.json";
 import { useState } from "react";
 import Recommended from "../Recommended/Recommended";
@@ -233,6 +233,19 @@ const Main = () => {
 
       {showOnlyTvSeries && (
         <TvSeries
+          movies={movies}
+          setMovies={setMovies}
+          readInputValue={readInputValue}
+          inputValue={inputValue}
+          setInputValue={setInputValue}
+          filteredMovies={filteredMovies}
+          bookMarked={bookMarked}
+          setBookMarked={setBookMarked}
+          makeBookMarked={makeBookMarked}
+        />
+      )}
+      {showBookmarkedMoviesSeries && (
+        <Bookmarked
           movies={movies}
           setMovies={setMovies}
           readInputValue={readInputValue}
