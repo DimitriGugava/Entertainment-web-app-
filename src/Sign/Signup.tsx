@@ -9,7 +9,7 @@ const Signup = () => {
       <div className="signContentContainer">
         <a className="signUpText">Sign Up</a>
         <div className="signInputContainer">
-          <input className="signInput" placeholder="Email" />
+          <input className="signInput" placeholder="Email address" />
           <div className="signLine"></div>
           <input className="signInput" placeholder="Password" />
           <div className="signLine"></div>
