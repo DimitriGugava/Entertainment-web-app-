@@ -1,0 +1,40 @@
+.signMainCont {
+  height: 800px;
+  width: auto;
+  background: #10141e;
+  margin: 0px auto;
+}
+
+.signIconCenterBox {
+  height: 25px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  margin: 48px auto;
+}
+.signIconCenter {
+  height: 25px;
+  width: 32px;
+  margin: 48px auto;
+}
+.signContentContainer {
+  height: 420px;
+  width: 327px;
+  border-radius: 10px;
+  background: #161d2f;
+  display: flex;
+  flex-direction: column;
+  margin: 58px auto;
+}
+.signUpText {
+  height: 40px;
+  width: 105px;
+  margin: 24px 24px;
+  font-family: "Outfit";
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 40px;
+  letter-spacing: -0.5px;
+  text-align: left;
+  color: #ffffff;
+}

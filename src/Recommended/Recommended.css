@@ -14,14 +14,15 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  height: auto;
+  height: 2600px;
   width: 345px;
+  margin: 0px auto;
 }
 .recommendedMovieListContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  height: 2600px;
+  height: auto;
   width: 370px !important;
 
   background: #10141e;

@@ -6,7 +6,7 @@ import data from "../data.json";
 const TvSeries = (props: any) => {
   return (
     <div className="recommendedContainer">
-      <h1 className="recommendedText">Recomended</h1>
+      <h1 className="recommendedText">TV Series</h1>
       <div className="recommendedMovieListContainer">
         {props.filteredMovies
           .filter((movie: any) => movie.category === "TV Series")

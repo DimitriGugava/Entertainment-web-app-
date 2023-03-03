@@ -1,7 +1,7 @@
 .mainContainer {
   position: relative;
   height: auto !important;
-  width: 375px;
+  width: auto;
   margin: 0px auto;
   background: #10141e;
 
@@ -15,8 +15,10 @@
   justify-content: space-around;
   gap: 50px;
   height: 56px;
-  width: 375px;
+  width: auto;
   background: #161d2f;
+
+  margin: 0px auto;
 }
 
 .movieIcon {
@@ -52,7 +54,7 @@
   height: 32px;
   width: 340px;
   gap: 24px;
-  margin: 33px 20px;
+  margin: 33px auto;
 }
 .searchIcon {
   height: 24px;
@@ -93,6 +95,7 @@
   width: 1700px;
   margin: 33px 20px;
   overflow: visible;
+  transition: transform 0.5s ease-in-out;
 }
 
 .trendingBox {

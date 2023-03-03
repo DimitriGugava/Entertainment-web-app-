@@ -164,7 +164,7 @@ const Main = () => {
         {movies
           .filter((movie) => movie.isTrending)
           .map((movie) => {
-            const id = `trending_${movie.id}`; // define unique id for each movie
+            const id = `trending_${movie.id}`;
             return (
               <div className="trendingBox" key={movie.id}>
                 <div className="trendingBookMarkBox">
@@ -172,13 +172,13 @@ const Main = () => {
                     <img
                       className="trendingBookMarkIcon"
                       src={bookMarkIconFull}
-                      onClick={() => makeBookMarked(id)} // pass id as argument
+                      onClick={() => makeBookMarked(id)}
                     />
                   ) : (
                     <img
                       className="trendingBookMarkIcon"
                       src={bookMarkIcon}
-                      onClick={() => makeBookMarked(id)} // pass id as argument
+                      onClick={() => makeBookMarked(id)}
                     />
                   )}
                 </div>
