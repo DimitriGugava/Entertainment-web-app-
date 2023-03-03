@@ -17,6 +17,10 @@ const Signup = () => {
           <div className="signLine"></div>
           <button className="createAccountButton">Create an account</button>
         </div>
+        <div className="loginBoxText">
+          Alread have an account?
+          <span className="loginUpButtonText">Login</span>
+        </div>
       </div>
     </div>
   );
