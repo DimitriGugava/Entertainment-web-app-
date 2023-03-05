@@ -136,3 +136,114 @@
   text-align: left;
   color: #00ff00;
 }
+@media only screen and (min-width: 768px) {
+  .signContentContainer {
+    height: 440px;
+    max-width: 500px;
+    border-radius: 10px;
+    background: #161d2f;
+    display: flex;
+    flex-direction: column;
+    margin: 58px auto;
+    padding: 24px;
+  }
+
+  .signUpText {
+    height: 40px;
+    width: 105px;
+    margin: 24px 0;
+    font-family: "Outfit";
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 40px;
+    letter-spacing: -0.5px;
+    text-align: left;
+    color: #ffffff;
+  }
+
+  .signInput {
+    height: 40px;
+    width: 100%;
+    max-width: 500px;
+    font-family: "Outfit";
+    background: #161d2f;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #ffffff;
+    margin: 3px 0;
+    outline: none;
+    border: none;
+  }
+
+  .signInput:focus {
+    background-color: none;
+  }
+
+  .signLine {
+    height: 1.4px;
+    width: 100%;
+    max-width: 500px;
+    background: #5a698f;
+    margin: 0px 0;
+  }
+
+  .createAccountButton {
+    height: 48px;
+    width: 100%;
+    max-width: 500px;
+    margin: 40px 0;
+    border-radius: 6px;
+    background: #fc4747;
+    font-family: "Outfit";
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #ffffff;
+    border: none;
+  }
+
+  .createAccountButton:hover {
+    background: #ff6b6b;
+    cursor: pointer;
+  }
+
+  .loginBoxText {
+    height: 19px;
+    width: 100%;
+    max-width: 500px;
+    margin: 0px 0;
+    font-family: "Outfit";
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #ffffff;
+  }
+
+  .loginUpButtonText {
+    height: 19px;
+    width: 51px;
+    margin-left: 5px;
+    font-family: "Outfit";
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #fc4747;
+  }
+
+  .loginUpButtonText:hover {
+    cursor: pointer;
+  }
+
+  .signError {
+    height: auto;
+  }
+}

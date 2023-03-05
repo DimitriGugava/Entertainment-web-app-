@@ -48,6 +48,8 @@
 }
 .profilePhotoBox:hover {
   cursor: pointer;
+  height: 31px;
+  width: 31px;
 }
 .logoutBox {
   display: flex;
@@ -282,5 +284,52 @@
     height: 32px;
     width: 381px;
     margin: 24px 24px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .movieTypeBox {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .selectType {
+    margin-top: -120px;
+  }
+  .selectMovieTypeBox {
+    position: absolute;
+    height: 960px;
+    width: 96px;
+    flex-direction: column;
+    border-radius: 20px;
+    margin: 20px 10px !important;
+  }
+  .selectType {
+    height: 25px;
+    width: 32px;
+  }
+  .profilePhotoBox {
+    height: 32px;
+    width: 32px;
+  }
+  .profilePhoto {
+    height: 32px;
+    width: 32px;
+  }
+  .logoutBox {
+    margin-left: 0px;
+    margin-top: 730px;
+  }
+  .logoutBox:active {
+    color: white;
+  }
+  .searchInputBox {
+    height: 32px;
+    width: 381px;
+    margin: 24px 150px;
+  }
+  .trendingHeadingText {
+    margin-left: 150px !important;
+  }
+  .trendingContainer {
+    margin-left: 150px !important;
   }
 }

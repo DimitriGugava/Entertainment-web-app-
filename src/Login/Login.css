@@ -122,3 +122,125 @@
   text-align: left;
   color: #fc4747;
 }
+@media only screen and (min-width: 768px) {
+  /* Default styles for both tablet and desktop */
+  .loginMainCont,
+  .signMainCont {
+    height: 800px;
+    width: auto;
+    background: #10141e;
+    margin: 0px auto;
+  }
+
+  .loginIconCenterBox,
+  .signIconCenterBox {
+    height: 25px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    margin: 48px auto;
+  }
+  .loginIconCenter,
+  .signIconCenter {
+    height: 25px;
+    width: 32px;
+    margin: 48px auto;
+  }
+  .loginContentContainer,
+  .signContentContainer {
+    height: 440px;
+    width: 327px;
+    border-radius: 10px;
+    background: #161d2f;
+    display: flex;
+    flex-direction: column;
+    margin: 58px auto;
+  }
+  .loginUpText,
+  .signUpText {
+    height: 40px;
+    width: 105px;
+    margin: 24px 24px;
+    font-family: "Outfit";
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 40px;
+    letter-spacing: -0.5px;
+    text-align: left;
+    color: #ffffff;
+  }
+  .loginInput,
+  .signInput {
+    height: 40px;
+    width: 279px;
+    font-family: "Outfit";
+    background: #161d2f;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #ffffff;
+    margin: 3px 20px;
+    outline: none;
+    border: none;
+  }
+  .loginLine,
+  .signLine {
+    height: 1.4px;
+    width: 279px;
+    background: #5a698f;
+    margin: 0px 20px;
+  }
+
+  .createAccountButton,
+  .loginButton {
+    height: 48px;
+    width: 279px;
+    margin: 40px 24px;
+    border-radius: 6px;
+    background: #fc4747;
+    font-family: "Outfit";
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #ffffff;
+    border: none;
+  }
+  .createAccountButton:hover,
+  .loginButton:hover {
+    background: #ff6b6b;
+    cursor: pointer;
+  }
+
+  .loginBoxText,
+  .signUpBoxText {
+    height: 19px;
+    width: 216px;
+
+    margin: 0px 56px;
+    font-family: "Outfit";
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #ffffff;
+  }
+
+  .loginUpButtonText,
+  .signUpButtonText {
+    height: 19px;
+    width: 51px;
+    margin-left: 5px;
+    font-family: "Outfit";
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0px;
+    text-align: left;
+    color: #fc4747;
+  }
+}

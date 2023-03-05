@@ -17,7 +17,7 @@ const Recommended = (props) => {
               <div className="recommendedMobieBox" key={movie.id}>
                 <img
                   className="recommendedMovieImage"
-                  src={movie.thumbnail.regular?.small}
+                  src={movie.thumbnail.regular?.large}
                 />
                 <div className="recommendedMovieInfoBox">
                   <div className="recommendedMovieFirstInfoPartBox">
