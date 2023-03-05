@@ -256,3 +256,31 @@
   text-align: center;
   color: #ffffff;
 }
+
+@media only screen and (min-width: 768px) {
+  .selectMovieTypeBox {
+    height: 72px;
+    width: 719px;
+  }
+  .selectType {
+    height: 25px;
+    width: 32px;
+  }
+  .profilePhotoBox {
+    height: 32px;
+    width: 32px;
+  }
+  .profilePhoto {
+    height: 32px;
+    width: 32px;
+  }
+  .logoutBox {
+    margin-left: 550px;
+    margin-top: 110px;
+  }
+  .searchInputBox {
+    height: 32px;
+    width: 381px;
+    margin: 24px 24px;
+  }
+}

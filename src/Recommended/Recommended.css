@@ -133,3 +133,26 @@
   opacity: 0.5;
   border-radius: 20px;
 }
+
+@media only screen and (min-width: 768px) {
+  .recommendedContainer {
+    border: 0.1px solid red;
+    align-items: left;
+    margin: 40px 25px;
+    width: 719px;
+    height: 1600px;
+  }
+  .recommendedText {
+    font-family: "Outfit";
+    font-size: 32px;
+    font-weight: 300;
+    line-height: 40px;
+    letter-spacing: -0.5px;
+    text-align: left;
+  }
+  .recommendedMovieListContainer {
+    border: 0.1px solid red;
+
+    width: 719px !important;
+  }
+}
