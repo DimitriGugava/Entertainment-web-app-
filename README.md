@@ -1,10 +1,13 @@
 # Movie and TV Show Recommendation App
 
 🎥 Lights, camera, action! 🍿🎬 This is a movie and TV show recommendation app built using React, TypeScript, Firebase, and REST APIs. Here's what it can do:
+
 #Live link: https://entertainment-web-app-phi.vercel.app/main
+
 # my linkedin: https://www.linkedin.com/in/dimitri-gugava/
+
 🌟 Built a responsive and user-friendly interface using React and TypeScript, incorporating React Router for seamless navigation and authentication tools for secure user login and registration. In order to log in, users must first sign up, and any errors or instructions for signing up will be displayed.
-![React-App (2)](https://user-images.githubusercontent.com/107649216/222972120-a4c38d72-b5e0-428e-8dad-0501ea674a0e.png)
+
 
 🔥 Integrated Firebase for backend authentication and data storage, fetching data from its API or world REST API to populate the app with movies and TV shows.
 
@@ -15,7 +18,7 @@
 📌 Enabled users to bookmark movies and TV shows by clicking on a bookmark icon, and persisting the bookmarked status through local storage.
 
 💪 Leveraged the power of useState, useRef, and other hooks to manage and manipulate the app's state and user interactions, ensuring a smooth and intuitive user experience.
-
+![React-App (2)](https://user-images.githubusercontent.com/107649216/222972120-a4c38d72-b5e0-428e-8dad-0501ea674a0e.png)
 ## Getting Started
 
 To get started with this app, follow these steps:
