@@ -46,7 +46,7 @@ const Login = () => {
         })
         .then((data) => {
           // Navigate to home page after successful login
-          window.location.href = "/";
+          window.location.href = "/main";
         })
         .catch((err) => {
           setError(err.message);

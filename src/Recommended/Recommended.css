@@ -68,7 +68,7 @@
   height: 2px;
   width: 2px;
   border-radius: 100px;
-  background: #ffffff;
+
   mix-blend-mode: normal;
   opacity: 0.5;
 }
@@ -158,13 +158,36 @@
   .recommendedMovieListContainer {
     width: 719px !important;
   }
+  .recommendedMovieImage {
+    border-radius: 8px;
+    transition: transform 0.3s ease-out;
+  }
+
+  .recommendedMobieBox:hover .recommendedMovieImage {
+    transform: scale(1.1);
+  }
+  .recommendedMovieInfoBox {
+    margin-left: 0px !important;
+  }
+  .recommendedMobieBox:hover .recommendedMovieInfoBox {
+    transform: translateY(-60px);
+  }
+
+  .recommendedMovieInfoBox {
+    height: 36px;
+    width: 105px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-out;
+    margin: 0 auto;
+  }
 }
 @media only screen and (min-width: 1024px) {
   .recommendedContainer {
     align-items: left;
     margin: 40px auto;
     width: 1240px;
-    height: 1600px;
+    height: 1800px;
     margin-left: 230px;
   }
   .recommendedText {
@@ -176,20 +199,56 @@
     letter-spacing: -0.5px;
     text-align: left;
     margin-top: 0px;
-    margin-left: -90px;
+    margin-left: -80px;
   }
   .recommendedMovieListContainer {
-    width: 1600px !important;
-    margin-top: 40px;
-    margin-left: -100px;
+    width: 1500px !important;
+    margin-top: 50px;
+    margin-left: -50px;
 
-    gap: 40px;
+    gap: 50px;
+  }
+  .recommendedMovieInfoBox {
+    margin-left: 0px !important;
+    margin-top: 0px !important;
+    width: 200px !important;
+    height: 55px !important;
   }
   .recommendedMobieBox {
-    height: 174px;
+    height: 240px;
     width: 280px;
     margin-left: 0px;
-    margin-top: 30px;
+    margin-top: 10px;
+
+    position: relative;
+  }
+
+  .recommendedMovieImage {
+    height: 174px;
+    width: 280px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-out;
+  }
+
+  .recommendedMobieBox:hover .recommendedMovieImage {
+    transform: scale(1.1);
+  }
+
+  .recommendedMobieBox:hover .recommendedMovieInfoBox {
+    transform: translateY(-70px);
+  }
+
+  .recommendedMovieInfoBox {
+    height: 36px;
+    width: 105px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-out;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 
   .recommendedMovieImage {

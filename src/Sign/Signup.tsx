@@ -89,7 +89,10 @@ const Signup = () => {
             });
           }
         })
-        .then((data) => {})
+        .then((data) => {
+          window.location.href = "/login";
+        })
+
         .catch((err) => {
           alert(err.message);
         });
