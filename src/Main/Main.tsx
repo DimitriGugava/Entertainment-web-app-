@@ -31,6 +31,8 @@ const Main = () => {
   const [showBookmarkedMoviesSeries, setShowBookmarkedMoviesSeries] =
     useState(false);
 
+  const [logout, setLogout] = useState(false);
+
   const handleMoveTrendingLeft = () => {
     setTrendingLeft(trendingLeft - 80);
   };
@@ -83,6 +85,14 @@ const Main = () => {
     setShowOnlyMovies(false);
     setShowOnlyTvSeries(false);
     setShowBookmarkedMoviesSeries(true);
+  };
+
+  const LogoutClick = () => {
+    setLogout(!logout);
+  };
+
+  const Loggedout = () => {
+    window.location.href = "/login";
   };
 
   return (
@@ -143,7 +153,12 @@ const Main = () => {
             />
           )}
         </div>
-        <div className="profilePhotoBox"></div>
+        <div className="profilePhotoBox" onClick={LogoutClick}></div>
+        {logout && (
+          <div className="logoutBox" onClick={Loggedout}>
+            Logout
+          </div>
+        )}
       </div>
       <div className="searchInputBox">
         <img className="searchIcon" src={searchIcon} />
