@@ -1,30 +1,32 @@
 import "./Login.css";
 import MovieIcon from "../assets/movie.svg";
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import { Link } from "react-router-dom";
 
-const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
+interface LoginProps {}
 
-  const emailInput = (e: any) => {
-    const trimmedEmail = e.target.value.trim();
+const Login: React.FC<LoginProps> = () => {
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [error, setError] = useState<string>("");
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
+  const emailInput = (e: ChangeEvent<HTMLInputElement>) => {
+    const trimmedEmail: string = e.target.value.trim();
     setEmail(trimmedEmail);
   };
 
-  const passwordInput = (e: any) => {
+  const passwordInput = (e: ChangeEvent<HTMLInputElement>) => {
     setPassword(e.target.value);
   };
 
-  const login = (e: any) => {
+  const login = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (email === "" || password === "") {
       setError("Please fill in both email and password fields");
     } else {
       setIsLoading(true);
-      let url;
+      let url: string;
       url =
         "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyD5lEm4Lm3apblnhSgdfA-f01D3qZldlkg";
 
@@ -39,7 +41,7 @@ const Login = () => {
             return res.json();
           } else {
             return res.json().then((data) => {
-              const errorMessage = data.error.message;
+              const errorMessage: string = data.error.message;
               throw new Error(errorMessage);
             });
           }
