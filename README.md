@@ -2,7 +2,7 @@
 
 🎥 Lights, camera, action! 🍿🎬 This is a movie and TV show recommendation app built using React, TypeScript, Firebase, and REST APIs. Here's what it can do:
 
-#Live link: https://entertainment-web-app-phi.vercel.app/main
+# Live link: https://entertainment-web-app-phi.vercel.app/main
 
 # my linkedin: https://www.linkedin.com/in/dimitri-gugava/
 
